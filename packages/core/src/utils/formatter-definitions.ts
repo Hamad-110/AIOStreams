@@ -1,4 +1,3 @@
-```typescript
 export type FormatterDefinition = { name: string; description: string };
 
 export const BUILTIN_FORMATTER_DEFINITIONS: Record<
@@ -59,6 +58,3 @@ export const BUILTIN_FORMATTER_DEFINITIONS: Record<
 {stream.message::exists[" ℹ️ {stream.message}"||""]}`,
   },
 };
-
-
-```
