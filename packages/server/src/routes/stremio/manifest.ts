@@ -1,4 +1,5 @@
-﻿import { Router, Request, Response, NextFunction } from 'express';
+```typescript
+import { Router, Request, Response, NextFunction } from 'express';
 import {
   AIOStreams,
   APIError,
@@ -35,13 +36,13 @@ const manifest = async (config?: UserData): Promise<Manifest> => {
     addonCatalogs = aiostreams.getAddonCatalogs();
   }
   return {
-    name: config?.addonName || appConfig.branding.addonName,
+    name: config?.addonName || 'Hamad Streams',
     id: addonId,
     version:
       appConfig.bootstrap.version === 'unknown'
         ? '0.0.0'
         : appConfig.bootstrap.version,
-    description: config?.addonDescription || appConfig.bootstrap.description,
+    description: config?.addonDescription || 'إضافة حمد الخاصة لمشاهدة الأفلام والمسلسلات 🍿🎬',
     catalogs,
     resources,
     types: resources.reduce((types, resource) => {
@@ -82,3 +83,6 @@ router.get(
     }
   }
 );
+
+
+```
