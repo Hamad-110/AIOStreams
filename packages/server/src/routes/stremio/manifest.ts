@@ -1,4 +1,3 @@
-```typescript
 import { Router, Request, Response, NextFunction } from 'express';
 import {
   AIOStreams,
@@ -83,6 +82,3 @@ router.get(
     }
   }
 );
-
-
-```
